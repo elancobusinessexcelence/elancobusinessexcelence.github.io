@@ -1,0 +1,152 @@
+body {
+    --sb-track-color: #F2F3F4; /* Color oscuro para el fondo de la barra */
+    --sb-thumb-color: #C9B273; /* El mismo verde que los botones */
+    --sb-size: 6px; /* Tamaño más delgado de la barra */
+    background-color: #F2F3F4;
+    color: #F2F3F4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #logo-container {
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #F2F3F4;
+  }
+  
+  #logo {
+    width: 150px;
+    height: 75px;
+  }
+  
+  .content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 75px);
+  }
+  
+  #hover-preview {
+    flex: 1;
+    background-color: #0e9e76;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    border: 2px solid #F2F3F4;
+    margin: 0 auto 20px; /* Centra el div horizontalmente */
+    width: 470px; /* Ancho fijo */
+  }
+  
+  
+  .dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 1;
+    margin: 0 20px 20px 20px;
+  }
+  
+  .dashboard-section {
+    background-color: #DEE1E3;
+    padding: 15px;
+    border-radius: 8px;
+    width: 800px;
+    height: 400px;
+    border: 2px solid #C9B273;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: #C9B273;
+  }
+  
+  .dashboard-header {
+    position: sticky;
+    top: 0;
+    background-color: #DEE1E3;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  
+  .dashboard-header h3 {
+    margin: 0;
+  }
+  
+  .dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .dashboard-buttons::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  .dashboard-buttons::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+  
+  .dashboard-buttons::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    .dashboard-buttons {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
+  
+  .dashboard-btn {
+    display: block;
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #C9B273;
+    color: #F2F3F4;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .dashboard-btn:hover {
+    background-color: #B09445;
+  }
+
+  .dashboard-btn .btn-icon {
+    width: 20px;        /* Tamaño del ícono */
+    height: 20px;       /* Tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    vertical-align: middle; /* Centrar el ícono con el texto */
+  }
+  
+  #page-title {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #F2F3F4;
+}
+
+#page-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #C9B273;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
