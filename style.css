@@ -1,9 +1,10 @@
 body {
-    --sb-track-color: #F2F3F4; /* Color oscuro para el fondo de la barra */
-    --sb-thumb-color: #C9B273; /* El mismo verde que los botones */
+    --sb-track-color: #36403E; /* Color oscuro para el fondo de la barra */
+    --sb-thumb-color: #D3D6D9; /* El mismo verde que los botones */
     --sb-size: 6px; /* Tamaño más delgado de la barra */
-    background-color: #F2F3F4;
-    color: #F2F3F4;
+    background-color: #142624;
+
+    color: #36403E;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -17,7 +18,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 0 20px;
-    background-color: #F2F3F4;
+
   }
   
   #logo {
@@ -35,13 +36,12 @@ body {
   
   #hover-preview {
     flex: 1;
-    background-color: #0e9e76;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
     transition: opacity 0.3s ease;
     opacity: 0;
-    border: 2px solid #F2F3F4;
+
     margin: 0 auto 20px; /* Centra el div horizontalmente */
     width: 470px; /* Ancho fijo */
   }
@@ -56,22 +56,22 @@ body {
   }
   
   .dashboard-section {
-    background-color: #DEE1E3;
     padding: 15px;
     border-radius: 8px;
     width: 800px;
     height: 400px;
-    border: 2px solid #C9B273;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    color: #C9B273;
-  }
+    color: #D3D6D9;
+    border: 2px solid #36403E; /* Vuelve a agregar el borde */
+}
+
   
   .dashboard-header {
     position: sticky;
     top: 0;
-    background-color: #DEE1E3;
+
     padding: 10px 0;
     margin-bottom: 10px;
     z-index: 1;
@@ -114,8 +114,7 @@ body {
     width: 90%;
     padding: 8px;
     margin-bottom: 8px;
-    background-color: #C9B273;
-    color: #F2F3F4;
+    color: #A8ADB3;
     border: none;
     border-radius: 8px;
     text-decoration: none;
@@ -127,7 +126,8 @@ body {
   }
   
   .dashboard-btn:hover {
-    background-color: #B09445;
+    color: #A8ADB3;
+    background-color: #0E1B19;
   }
 
   .dashboard-btn .btn-icon {
@@ -140,13 +140,13 @@ body {
   #page-title {
     text-align: center;
     padding: 10px 0;
-    background-color: #F2F3F4;
+
 }
 
 #page-title h1 {
     margin: 0;
     font-size: 24px;
-    color: #C9B273;
+    color: #D3D6D9;
     letter-spacing: 1px;
     font-weight: bold;
 }
