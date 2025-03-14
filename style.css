@@ -2,7 +2,7 @@ body {
   --sb-track-color: #B0B4BF;
   --sb-thumb-color: #0D0C0B;
   --sb-size: 6px;
-  background-color: #f2f3f4;
+  background-color: #ffffff;
   color: #B0B4BF;
   margin: 0;
   padding: 0;
@@ -66,6 +66,7 @@ body {
 
 .dashboard-header h3 {
   margin: 0;
+  color: #0072CE;
 }
 
 .dashboard-buttons {
@@ -134,7 +135,7 @@ body {
 
 #page-title h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 36px;
   color: #0D0C0B;
   letter-spacing: 1px;
   font-weight: bold;
