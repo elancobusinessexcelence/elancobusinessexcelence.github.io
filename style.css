@@ -1,152 +1,165 @@
 body {
-    --sb-track-color: #36403E; /* Color oscuro para el fondo de la barra */
-    --sb-thumb-color: #D3D6D9; /* El mismo verde que los botones */
-    --sb-size: 6px; /* Tamaño más delgado de la barra */
-    background-color: #142624;
-
-    color: #36403E;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #logo-container {
-    height: 75px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-
-  }
-  
-  #logo {
-    width: 150px;
-    height: 75px;
-  }
-  
-  .content-area {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    height: calc(100vh - 75px);
-  }
-  
-  #hover-preview {
-    flex: 1;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-
-    margin: 0 auto 20px; /* Centra el div horizontalmente */
-    width: 470px; /* Ancho fijo */
-  }
-  
-  
-  .dashboard-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex: 1;
-    margin: 0 20px 20px 20px;
-  }
-  
-  .dashboard-section {
-    padding: 15px;
-    border-radius: 8px;
-    width: 800px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    color: #D3D6D9;
-    border: 2px solid #36403E; /* Vuelve a agregar el borde */
+  --sb-track-color: #36403E; /* Color oscuro para el fondo de la barra */
+  --sb-thumb-color: #D3D6D9; /* El mismo verde que los botones */
+  --sb-size: 6px; /* Tamaño más delgado de la barra */
+  background-color: #142624;
+  color: #36403E;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
 }
 
-  
-  .dashboard-header {
-    position: sticky;
-    top: 0;
 
-    padding: 10px 0;
-    margin-bottom: 10px;
-    z-index: 1;
-  }
-  
-  .dashboard-header h3 {
-    margin: 0;
-  }
-  
+
+/* Logo */
+#logo-container {
+  height: 75px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#logo {
+  width: 150px;
+  height: 75px;
+}
+
+/* Área de contenido principal */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 75px);
+}
+
+/* Previsualización en hover */
+#hover-preview {
+  flex: 1;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  margin: 0 auto 20px;
+  width: 470px;
+}
+
+/* Contenedor de dashboards */
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+  margin: 0 20px 20px 20px;
+}
+
+/* Sección individual de cada dashboard */
+.dashboard-section {
+  padding: 15px;
+  border-radius: 8px;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  color: #D3D6D9;
+  border: 2px solid #36403E;
+}
+
+/* Encabezado de cada sección */
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.dashboard-header h3 {
+  margin: 0;
+}
+
+/* Botones de dashboard */
+.dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Personalización de la barra de desplazamiento */
+.dashboard-buttons::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.dashboard-buttons::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.dashboard-buttons::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
   .dashboard-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: auto;
-    flex: 1;
-  }
-  
-  .dashboard-buttons::-webkit-scrollbar {
-    width: var(--sb-size);
-  }
-  
-  .dashboard-buttons::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 3px;
-  }
-  
-  .dashboard-buttons::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 3px;
-  }
-  
-  @supports not selector(::-webkit-scrollbar) {
-    .dashboard-buttons {
       scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-    }
   }
-  
-  .dashboard-btn {
-    display: block;
-    width: 90%;
-    padding: 8px;
-    margin-bottom: 8px;
-    color: #A8ADB3;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .dashboard-btn:hover {
-    color: #A8ADB3;
-    background-color: #0E1B19;
-  }
+}
 
-  .dashboard-btn .btn-icon {
-    width: 20px;        /* Tamaño del ícono */
-    height: 20px;       /* Tamaño del ícono */
-    margin-right: 10px; /* Espacio entre el ícono y el texto */
-    vertical-align: middle; /* Centrar el ícono con el texto */
-  }
-  
-  #page-title {
-    text-align: center;
-    padding: 10px 0;
+/* Estilo de los botones */
+.dashboard-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 8px;
+  color: #A8ADB3;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.dashboard-btn:hover {
+  color: #A8ADB3;
+  background-color: #0E1B19;
+}
+
+/* Íconos dentro de los botones */
+.dashboard-btn .btn-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Título de la página */
+#page-title {
+  text-align: center;
+  padding: 10px 0;
 }
 
 #page-title h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #D3D6D9;
-    letter-spacing: 1px;
-    font-weight: bold;
+  margin: 0;
+  font-size: 24px;
+  color: #D3D6D9;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
