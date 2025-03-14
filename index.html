@@ -10,8 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Merienda:wght@300..900&family=Noto+Serif+JP:wght@200..900&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,57 +22,33 @@
         <h1>Dashboards de Business Excellence</h1>
     </div>
 
-
     <div class="content-area">
-        <div id="hover-preview"></div>
-
         <div class="dashboard-container">
-            <div class="dashboard-section">
+            <div class="dashboard-section fixed-size">
                 <div class="dashboard-header">
                     <h3>Sell Out</h3>
                 </div>
                 <div class="dashboard-buttons">
-                    <a href="#" class="dashboard-btn" data-img="imagenes/sow_fah.png"><img
-                            src="imagenes/icono_sow_fah.png" class="btn-icon">SOW FAH</a>
-                    <a href="#" class="dashboard-btn" data-img="imagenes/sow_cah.png"><img
-                            src="imagenes/icono_sow_cah.png" class="btn-icon">SOW CAH</a>
-                    <a href="#" class="dashboard-btn" data-img="imagenes/plan_hospital.png"><img
-                            src="imagenes/icono_plan_hospital.png" class="btn-icon">Plan Hospital</a>
-                    <a href="#" class="dashboard-btn" data-img="imagenes/business_plan.png"><img
-                            src="imagenes/icono_business_plan.png" class="btn-icon">Plan de Negocios</a>
-
-
-                            <a href="#" class="dashboard-btn" data-img="imagenes/sow_fah.png"><img
-                                src="imagenes/icono_sow_fah.png" class="btn-icon">SOW FAH</a>
-                        <a href="#" class="dashboard-btn" data-img="imagenes/sow_cah.png"><img
-                                src="imagenes/icono_sow_cah.png" class="btn-icon">SOW CAH</a>
-                        <a href="#" class="dashboard-btn" data-img="imagenes/plan_hospital.png"><img
-                                src="imagenes/icono_plan_hospital.png" class="btn-icon">Plan Hospital</a>
-                        <a href="#" class="dashboard-btn" data-img="imagenes/business_plan.png"><img
-                                src="imagenes/icono_business_plan.png" class="btn-icon">Plan de Negocios</a>
-
-
-    
-    
-
-
-
-
-
+                    <a href="#" class="dashboard-btn"><img src="imagenes/icono_sow_fah.png" class="btn-icon">SOW FAH</a>
+                    <a href="#" class="dashboard-btn"><img src="imagenes/icono_sow_cah.png" class="btn-icon">SOW CAH</a>
+                    <a href="#" class="dashboard-btn"><img src="imagenes/icono_plan_hospital.png" class="btn-icon">Plan Hospital</a>
+                    <a href="#" class="dashboard-btn"><img src="imagenes/icono_business_plan.png" class="btn-icon">Plan de Negocios</a>
+                    
+                
                 </div>
+                
             </div>
 
-            <div class="dashboard-section">
+            <div class="dashboard-section fixed-size">
                 <div class="dashboard-header">
                     <h3>Market</h3>
                 </div>
                 <div class="dashboard-buttons">
-                    <a href="#" class="dashboard-btn" data-img="imagenes/ceesa.png"><img src="imagenes/icono_ceesa.png"
-                            class="btn-icon">Market Ceesa</a>
+                    <a href="#" class="dashboard-btn"><img src="imagenes/icono_ceesa.png" class="btn-icon">Market Ceesa</a>
                 </div>
             </div>
 
-            <div class="dashboard-section">
+            <div class="dashboard-section fixed-size">
                 <div class="dashboard-header">
                     <h3>SFE</h3>
                 </div>
@@ -85,21 +60,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const buttons = document.querySelectorAll('.dashboard-btn');
-        const preview = document.getElementById('hover-preview');
-
-        buttons.forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                const imgSrc = button.getAttribute('data-img');
-                preview.style.backgroundImage = `url(${imgSrc})`;
-                preview.style.opacity = '1';
-            });
-            button.addEventListener('mouseleave', () => {
-                preview.style.opacity = '0';
-            });
-        });
-    </script>
 </body>
 
 </html>

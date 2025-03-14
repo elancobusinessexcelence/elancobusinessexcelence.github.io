@@ -1,23 +1,20 @@
 body {
-  --sb-track-color: #36403E; /* Color oscuro para el fondo de la barra */
-  --sb-thumb-color: #D3D6D9; /* El mismo verde que los botones */
-  --sb-size: 6px; /* Tamaño más delgado de la barra */
-  background-color: #142624;
-  color: #36403E;
+  --sb-track-color: #B0B4BF;
+  --sb-thumb-color: #0D0C0B;
+  --sb-size: 6px;
+  background-color: #f2f3f4;
+  color: #B0B4BF;
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Merienda", cursive;
+  font-family: Helvetica;
   font-optical-sizing: auto;
   font-weight: 10;
   font-style: normal;
 }
 
-
-
-/* Logo */
 #logo-container {
   height: 75px;
   display: flex;
@@ -31,7 +28,6 @@ body {
   height: 75px;
 }
 
-/* Área de contenido principal */
 .content-area {
   display: flex;
   flex-direction: column;
@@ -40,19 +36,6 @@ body {
   height: calc(100vh - 75px);
 }
 
-/* Previsualización en hover */
-#hover-preview {
-  flex: 1;
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  margin: 0 auto 20px;
-  width: 470px;
-}
-
-/* Contenedor de dashboards */
 .dashboard-container {
   display: flex;
   justify-content: space-between;
@@ -61,20 +44,18 @@ body {
   margin: 0 20px 20px 20px;
 }
 
-/* Sección individual de cada dashboard */
-.dashboard-section {
+.dashboard-section.fixed-size {
   padding: 15px;
   border-radius: 8px;
   width: 800px;
-  height: 400px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  color: #D3D6D9;
-  border: 2px solid #36403E;
+  color: #0D0C0B;
+  border: 2px solid #B0B4BF;
 }
 
-/* Encabezado de cada sección */
 .dashboard-header {
   position: sticky;
   top: 0;
@@ -87,7 +68,6 @@ body {
   margin: 0;
 }
 
-/* Botones de dashboard */
 .dashboard-buttons {
   display: flex;
   flex-direction: column;
@@ -96,7 +76,6 @@ body {
   flex: 1;
 }
 
-/* Personalización de la barra de desplazamiento */
 .dashboard-buttons::-webkit-scrollbar {
   width: var(--sb-size);
 }
@@ -117,7 +96,6 @@ body {
   }
 }
 
-/* Estilo de los botones */
 .dashboard-btn {
   display: flex;
   align-items: center;
@@ -126,7 +104,7 @@ body {
   width: 90%;
   padding: 8px;
   margin-bottom: 8px;
-  color: #A8ADB3;
+  color: #0D0C0B;
   border: none;
   border-radius: 8px;
   text-decoration: none;
@@ -138,11 +116,10 @@ body {
 }
 
 .dashboard-btn:hover {
-  color: #A8ADB3;
-  background-color: #0E1B19;
+  color: #f2f3f4;
+  background-color: #0072CE;
 }
 
-/* Íconos dentro de los botones */
 .dashboard-btn .btn-icon {
   width: 24px;
   height: 24px;
@@ -150,7 +127,6 @@ body {
   object-fit: contain;
 }
 
-/* Título de la página */
 #page-title {
   text-align: center;
   padding: 10px 0;
@@ -159,7 +135,7 @@ body {
 #page-title h1 {
   margin: 0;
   font-size: 24px;
-  color: #D3D6D9;
+  color: #0D0C0B;
   letter-spacing: 1px;
   font-weight: bold;
 }
