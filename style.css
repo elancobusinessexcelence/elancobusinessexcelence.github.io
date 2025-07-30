@@ -33,7 +33,7 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  height: calc(100vh - 75px);
+  height: calc(75vh - 70px);
 }
 
 .dashboard-container {
@@ -48,7 +48,7 @@ body {
   padding: 15px;
   border-radius: 8px;
   width: 800px;
-  height: 650px;
+  height: 625px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
