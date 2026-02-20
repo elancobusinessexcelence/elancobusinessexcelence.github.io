@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Integración SFE</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .logo {
+            max-width: 250px;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            color: #1f4e79;
+        }
+
+        h1 span {
+            color: #27ae60;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: #1f4e79;
+        }
+
+        /* TABS */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .tab {
+            padding: 10px 25px;
+            border: none;
+            background: #dfe6e9;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .tab.active {
+            background: #1f4e79;
+            color: white;
+        }
+
+        /* Timeline */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-top: 6px solid #3498db;
+        }
+
+        .step h3 {
+            margin: 0 0 10px;
+            color: #3498db;
+        }
+
+        /* Checklist */
+        .checklist {
+            margin-top: 40px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 6px solid #2ecc71;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .check {
+            font-size: 22px;
+            margin-right: 15px;
+            color: #2ecc71;
+        }
+
+        /* Tabs content */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Topics */
+        .topics {
+            margin-top: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ACCORDION (FIX PRINCIPAL) */
+        .accordion-btn {
+            width: 100%;
+            text-align: left;
+            padding: 15px 20px;
+            border: none;
+            background: #ecf0f1;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .accordion-btn:hover {
+            background: #dfe6e9;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .accordion-content ul {
+            padding: 15px 25px;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="header-text">
+                <h1>
+                    PROCESO DE INTEGRACIÓN <br>
+                    <strong>NUEVOS GERENTES Y REPRESENTANTES <span>SFE</span></strong>
+                </h1>
+                <p><strong>Manual y checklist para el equipo de ventas</strong></p>
+            </div>
+
+            <img src="imagenes/sfe.png" class="logo">
+        </div>
+
+        <h2>¿Cuál es el proceso de integración?</h2>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab(event,'rep')">Representante</button>
+            <button class="tab" onclick="showTab(event,'ger')">Gerente</button>
+        </div>
+
+        <!-- REPRESENTANTE -->
+        <div id="rep" class="tab-content active">
+
+            <div class="timeline">
+                <div class="step">
+                    <h3>1. Primer día</h3>
+                    <p>Envío de bienvenida con accesos e información inicial. Capacitación inicial (Elanco School) y
+                        revisión del manual SFE.</p>
+                </div>
+
+                <div class="step">
+                    <h3>2. Segunda semana</h3>
+                    <p>Reunión para resolver dudas sobre SFE, CRM, incentivos, métricas y planeación.</p>
+                </div>
+
+                <div class="step">
+                    <h3>3. Primer mes</h3>
+                    <p>Seguimiento para validar que el representante está correctamente integrado.</p>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Primeros días</strong> Acceso a plataformas (Connect y Tableau)</div>
+                </div>
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Primeros días</strong> Descarga de CRM (Veeva)</div>
+                </div>
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Primeras 2 semanas</strong> Completar entrenamiento SFE</div>
+                </div>
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Primeros 2 meses</strong> Participación en reuniones y seguimiento</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- GERENTE -->
+        <div id="ger" class="tab-content">
+            <div class="timeline">
+                <div class="step">
+                    <h3>1. Primer día</h3>
+                    <p>Solicitar la creación del nuevo representante en CRM y asegurar accesos necesarios.</p>
+                    <p>Enviar bienvenida, compartir accesos y explicar herramientas clave.</p>
+                </div>
+
+                <div class="step">
+                    <h3>2. Segunda semana</h3>
+                    <p>Reunión para revisión de métricas, objetivos y resolución de dudas.</p>
+                </div>
+
+                <div class="step">
+                    <h3>3. Primer mes</h3>
+                    <p>Realiza otra reunión, esta vez de seguimiento, para garantizar que el representante esté
+                        integrado en los temas del área.</p>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Antes del ingreso</strong> Avisar nuevo colaborador</div>
+                </div>
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Semana 1</strong> Enviar métricas y objetivos</div>
+                </div>
+                <div class="item">
+                    <div class="check">✔</div>
+                    <div><strong>Semana 2</strong> Dar seguimiento y ajustar plan</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TEMAS -->
+        <h2>Temas esenciales que debe dominar</h2>
+
+        <div class="topics">
+            <div class="accordion">
+
+                <!-- (TU CONTENIDO SE QUEDA IGUAL, NO LO CAMBIÉ) -->
+
+                <button class="accordion-btn">SFE y CRM</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Optimiza la eficiencia de la fuerza de ventas mediante estrategias basadas en datos</li>
+                        <li>Segmenta clientes (A, B, C) para priorizar visitas y enfocar esfuerzos comerciales</li>
+                        <li>Define planes de visita (cycle plan) para asegurar cobertura y frecuencia adecuada</li>
+                        <li>Da seguimiento a clientes registrando interacciones, visitas y oportunidades de venta</li>
+                        <li>Centraliza información clave como datos, historial y comportamiento del cliente</li>
+                        <li>Permite medir desempeño con KPIs</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Alta de cuentas (personas y negocios)</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Ir a “Mis cuentas”, hacer clic en “Nuevo/a” y buscar el nombre en “Términos de búsqueda”
+                            para validar que no exista previamente</li>
+                        <li>Revisar los resultados: círculo naranja indica que la cuenta ya está en tu territorio, gris
+                            que no lo está; si aparece en gris, seleccionarla y dar clic en “Añadir cuenta”</li>
+                        <li>Si no existe, crear una nueva cuenta seleccionando “Solicitud de cuenta” (establecimiento) o
+                            “Personal Network” (persona), siempre iniciando primero por el establecimiento</li>
+                        <li>Completar los campos obligatorios (marcados en rojo) asegurando que la información sea
+                            correcta y que la división sea siempre “LAN”</li>
+                        <li>Para “Personal Network”, llena la información correctamente y asegurate de usar la lupa en
+                            “Principal” para buscar y vincular el
+                            establecimiento correcto antes de continuar</li>
+                        <li>Confirmar la selección de la cuenta y finalizar el proceso dando clic en “Continuar”</li>
+                    </ul>
+                </div>
+                <button class="accordion-btn">Edición de cuentas</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Al ingresar a una cuenta, ubicar el botón “Edit” al lado derecho del nombre</li>
+                        <li>Hacer clic en “Edit” para abrir la ventana de edición de la cuenta</li>
+                        <li>Modificar la información general de la cuenta según sea necesario</li>
+                        <li>La dirección no puede ser editada desde esta sección</li>
+                        <li>Es posible actualizar el estatus de la cuenta dentro de esta vista</li>
+                        <li>Guardar los cambios realizados para que se reflejen correctamente</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Visibilidad de cuentas</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Ir al botón “Mis cuentas” en la barra de navegación para visualizar las cuentas asignadas a
+                            tu territorio</li>
+                        <li>Ubicar el ícono morado a la derecha y abrir el menú desplegable (por defecto muestra “3G
+                            accounts”)</li>
+                        <li>Seleccionar “All ★★” para ver todas las cuentas disponibles</li>
+                        <li>Elegir “All Business Accounts ★★” para visualizar solo establecimientos</li>
+                        <li>Elegir “All Personal Accounts ★★” para visualizar únicamente el personal de los
+                            establecimientos</li>
+                        <li>Si la cuenta no aparece, puedes añadirla a tu territorio si ya existe o crear una nueva
+                            cuenta</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Creación de visitas</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Ir al botón “Planificación” en la barra de navegación para abrir el calendario de visitas
+                        </li>
+                        <li>Seleccionar la fecha y hora deseada con clic izquierdo y elegir “Agregar visita”</li>
+                        <li>Buscar la cuenta en la barra correspondiente; si no aparece, puede que no exista o no esté
+                            asignada, por lo que deberás crearla o añadirla</li>
+                        <li>La visita se mostrará en color rojo, indicando que ha sido creada correctamente</li>
+                        <li>Para editar o eliminar la visita, hacer clic sobre ella y seleccionar “Editar” o el ícono de
+                            basurero</li>
+                        <li>Completar los campos obligatorios (marcados en rojo) sin cambiar el “Interaction Type” (debe
+                            permanecer como visita)</li>
+                        <li>Llenar siempre los campos clave: objetivo de la visita, necesidades/oportunidades
+                            identificadas, comentarios y notas para la próxima visita</li>
+                        <li>Asignar siempre un asistente; si no existe, debe crearse y asociarse a la cuenta</li>
+                        <li>Cuanda la visita este enviada se debera poner color verde</li>
+                        <li>Nota: este proceso aplica únicamente para la versión de escritorio, no para tablet</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Registro de tiempo fuera de campo</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Métricas SFE</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Cálculo de tiempo en campo</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Plan de incentivos</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Análisis en Tableau</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Reportes de coaching</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+                <button class="accordion-btn">Cycle plans</button>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Contenido 1</li>
+                        <li>Contenido 2</li>
+                        <li>Contenido 3</li>
+                        <li>Contenido 4</li>
+                        <li>Contenido 5</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>SFE México | Elanco</footer>
+
+    </div>
+
+    <script>
+        function showTab(event, tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        /* Accordion PRO */
+        document.querySelectorAll(".accordion-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const content = button.nextElementSibling;
+
+                document.querySelectorAll(".accordion-content").forEach(c => {
+                    if (c !== content) c.style.maxHeight = null;
+                });
+
+                content.style.maxHeight
+                    ? content.style.maxHeight = null
+                    : content.style.maxHeight = content.scrollHeight + "px";
+            });
+        });
+    </script>
+
+</body>
+
+</html>
