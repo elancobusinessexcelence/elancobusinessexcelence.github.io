@@ -383,77 +383,290 @@
                 <button class="accordion-btn">Registro de tiempo fuera de campo</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li>Ir al botón “Planificación” en la barra de navegación para abrir el calendario</li>
+                        <li>Seleccionar la fecha y hora correspondiente con clic izquierdo y elegir “Agregar tiempo
+                            fuera de territorio”</li>
+                        <li>En la ventana emergente, seleccionar en “Razón” el motivo de la ausencia</li>
+                        <li>Elegir la fecha de inicio y en “Tiempo” seleccionar la opción adecuada (AM, PM, All day, 2
+                            days, etc.) según la duración</li>
+                        <li>Completar la información y dar clic en “Guardar” para registrar el tiempo fuera de
+                            territorio</li>
+                        <li>El registro aparecerá reflejado en el calendario según el periodo seleccionado</li>
+                        <li>Nota: una vez creado, el registro puede editarse pero no eliminarse</li>
                     </ul>
                 </div>
 
                 <button class="accordion-btn">Métricas SFE</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li><strong>Cycle Plan</strong>
+                            <ul>
+                                <li>Cumplimiento requerido &gt;91%</li>
+                                <li>Visitas planificadas según capacidad y segmentación (clientes A/B)</li>
+                                <li>No depende del volumen de ventas</li>
+                                <li>Evaluación por cliente individual</li>
+                                <li>Visitas extra no compensan faltantes</li>
+                                <li>Ajustes permitidos hasta 15 días</li>
+                                <li><strong>Clave:</strong> respetar planificación por cliente</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Promedio de días en campo</strong>
+                            <ul>
+                                <li>Cumplimiento requerido &gt;90%</li>
+                                <li>Fórmula: visitas totales ÷ días en campo</li>
+                                <li>Evaluación mensual y trimestral</li>
+                                <li>Días ajustables hasta 15 días antes de cerrar el ciclo</li>
+                                <li>Mínimo 90% del objetivo por unidad</li>
+                                <li>Objetivos por línea:
+                                    <ul>
+                                        <li>Companion: 9 visitas</li>
+                                        <li>Rumiantes: 4 visitas</li>
+                                        <li>Aves: 2 visitas</li>
+                                        <li>Cerdos: 3 visitas</li>
+                                    </ul>
+                                </li>
+                                <li>Algunas líneas tienen día administrativo</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Calidad de visita</strong>
+                            <ul>
+                                <li>Se evalúa el llenado de 4 campos clave</li>
+                                <li>Campos obligatorios dentro del registro de visita</li>
+                                <li>Objetivo ubicado en sección específica</li>
+                                <li>Indicadores visuales (íconos) marcan campos clave</li>
+                                <li>Compromisos reflejan seguimiento de la última visita</li>
+                                <li><strong>Error común:</strong> no registrar el objetivo</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Latencia de visita</strong>
+                            <ul>
+                                <li>Cumplimiento requerido ≥90% con registro &lt; 7 días</li>
+                                <li>Mide tiempo entre visita y registro</li>
+                                <li>Máximo esperado: 7 días</li>
+                                <li>Máximo 10% con retraso semanal</li>
+                                <li>Fecha de envío no es editable</li>
+                                <li>Modo offline también guarda fecha de envío</li>
+                                <li>Contactar SFE ante problemas de registro</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
-
                 <button class="accordion-btn">Cálculo de tiempo en campo</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li><strong>Cálculo de días en territorio</strong>
+                            <ul>
+                                <li>Se parte de los días totales del trimestre</li>
+                                <li>Se restan:
+                                    <ul>
+                                        <li>Fines de semana</li>
+                                        <li>Vacaciones</li>
+                                        <li>Feriados</li>
+                                        <li>Otros eventos</li>
+                                        <li>Días administrativos</li>
+                                        <li>Entrenamientos y eventos de la empresa</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Capacidad de visitas</strong>
+                            <ul>
+                                <li>Se calcula multiplicando los días en territorio por la meta diaria</li>
+                                <li>Objetivos por línea:
+                                    <ul>
+                                        <li>Companion: 9 visitas/día</li>
+                                        <li>Rumiantes: 4 visitas/día</li>
+                                        <li>Aves: 2 visitas/día</li>
+                                        <li>Cerdos: 3 visitas/día</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Objetivo de días en campo</strong>
+                            <ul>
+                                <li>La capacidad total del trimestre se divide entre 3</li>
+                                <li>Esto define el objetivo mensual de días en campo</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Promedio de visitas</strong>
+                            <ul>
+                                <li>Se calcula como: total de visitas ÷ días en campo</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Promedio mensual (SFE)</strong>
+                            <ul>
+                                <li>SFE divide los días disponibles del trimestre entre 3</li>
+                                <li>Esto permite evaluar el desempeño mensual</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Ajustes durante el trimestre</strong>
+                            <ul>
+                                <li>Los días disponibles pueden modificarse</li>
+                                <li>Aplica cuando hay cambios aprobados en el Cycle Plan</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
                 <button class="accordion-btn">Plan de incentivos</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li><strong>Acceso a incentivos</strong>
+                            <ul>
+                                <li>Requiere cumplir métricas clave de desempeño comercial</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Cycle Plan</strong>
+                            <ul>
+                                <li>Cumplimiento mayor al 91%</li>
+                                <li>Enfocado en frecuencia de visitas a clientes A/B</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Promedio de días en campo</strong>
+                            <ul>
+                                <li>Debe ser superior al 90%</li>
+                                <li>Refleja consistencia en actividad en territorio</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Frecuencia de evaluación</strong>
+                            <ul>
+                                <li>Seguimiento y medición se realizan de forma trimestral</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Monitoreo de desempeño</strong>
+                            <ul>
+                                <li>Los resultados pueden consultarse en Tableau</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
                 <button class="accordion-btn">Análisis en Tableau</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li><strong>Monitoreo de métricas</strong>
+                            <ul>
+                                <li>Las métricas de desempeño se consultan a través de dashboards de Tableau
+                                    desarrollados por el equipo global</li>
+                                <li>Estos dashboards son la única fuente oficial para evaluar el cumplimiento</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Alcance del equipo SFE México</strong>
+                            <ul>
+                                <li>El equipo de SFE México no tiene control ni permisos para editar los dashboards</li>
+                                <li>La estructura, cálculos y visualizaciones son definidos a nivel global</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Criterio de evaluación</strong>
+                            <ul>
+                                <li>Las métricas mostradas en Tableau son las que determinan el cumplimiento o no
+                                    cumplimiento</li>
+                                <li>No se consideran cálculos externos o interpretaciones fuera de la plataforma</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
                 <button class="accordion-btn">Reportes de coaching</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li><strong>¿Qué es?</strong>
+                            <ul>
+                                <li>Herramienta formal para evaluar el desempeño en visitas de campo</li>
+                                <li>Enfocada en la calidad de la visita, no solo en la cantidad</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Objetivo</strong>
+                            <ul>
+                                <li>Impulsar el desarrollo profesional continuo del representante</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Participantes</strong>
+                            <ul>
+                                <li>Realizado por el Gerente de Distrito (DM) durante acompañamientos en campo</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Contenido clave</strong>
+                            <ul>
+                                <li>Fortalezas identificadas</li>
+                                <li>Áreas de oportunidad</li>
+                                <li>Plan de acción con compromisos</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Uso para SFE</strong>
+                            <ul>
+                                <li>Permite detectar brechas de capacitación en la fuerza de ventas</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Plataforma</strong>
+                            <ul>
+                                <li>Se registra y consulta en ElancoConnect</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
                 <button class="accordion-btn">Cycle plans</button>
                 <div class="accordion-content">
                     <ul>
-                        <li>Contenido 1</li>
-                        <li>Contenido 2</li>
-                        <li>Contenido 3</li>
-                        <li>Contenido 4</li>
-                        <li>Contenido 5</li>
+                        <li><strong>¿Qué es?</strong>
+                            <ul>
+                                <li>Plan operativo que define objetivos de visitas por representante en un periodo
+                                    (generalmente trimestral)</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Segmentación de clientes</strong>
+                            <ul>
+                                <li>Basado en clasificación A, B, C y D</li>
+                                <li>Prioriza clientes de mayor valor (A/B)</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Frecuencia de visitas</strong>
+                            <ul>
+                                <li>Establece cuántas veces debe visitarse cada cliente en el ciclo</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Métrica de cumplimiento</strong>
+                            <ul>
+                                <li>Se mide por % de ejecución</li>
+                                <li>Objetivo esperado: &gt;91% en clientes A/B</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Alineación estratégica</strong>
+                            <ul>
+                                <li>Asegura coherencia con campañas de marketing y lanzamientos</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Herramientas</strong>
+                            <ul>
+                                <li>Planeación y registro en Veeva CRM y Elanco Connect</li>
+                                <li>Monitoreo y análisis en Tableau y Power BI</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
