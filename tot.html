@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Other Time - Elanco Connect</title>
+<link rel="icon" type="image/png" sizes="16x32" href="/imagenes/logo.png">
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #2c3e50;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.header-text {
+    flex: 1;
+}
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #1f4e79;
+}
+h1 span {
+    color: #27ae60;
+}
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #1f4e79;
+}
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.step {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 6px solid #3498db;
+}
+.step h3 {
+    margin: 0 0 10px;
+    color: #3498db;
+}
+.section {
+    margin-top: 40px;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+.highlight {
+    border-left: 6px solid #27ae60;
+}
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    border: none;
+    background: #ecf0f1;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    border-radius: 8px;
+}
+.accordion-content ul {
+    padding: 15px 25px;
+    margin: 0;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #888;
+}
+.logo {
+    max-width: 200px;
+}
+/* Estilo adicional para la tabla de motivos */
+.tot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.tot-table th {
+    background-color: #1f4e79;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+.tot-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+.row-unavailable { border-left: 5px solid #8e44ad; }
+.row-off-territory { border-left: 5px solid #e67e22; }
+.row-in-territory { border-left: 5px solid #27ae60; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+        <div class="header-text">
+            <h1>REGISTRO DE MOTIVOS <span>TIEMPO FUERA DE TERRITORIO (TOT)</span></h1>
+            <p>Guía 2026 para Elanco Connect (Veeva CRM) - SFE Reporting</p>
+        </div>
+        <img src="imagenes/sfe.png" class="logo">
+    </div>
+<h2>Reglas Generales de Captura</h2>
+<div class="card highlight">
+        <ul>
+            <li><strong>Medición:</strong> Se mide por medio día o día completo. No existe entrada de TOT por horas.</li>
+            <li><strong>Métrica de Llamadas:</strong> El TOT no cuenta para la métrica de "llamadas por día".</li>
+            <li><strong>Prioridad de Llamada:</strong> El TOT solo se captura si NO hay llamadas ese día. Si hay una llamada, cuenta como Día de Campo (o 0.5 si se ingresa medio día de TOT).</li>
+            <li><strong>Fines de Semana:</strong> Use una entrada de un solo día en lugar de rangos de varios días para evitar errores en los reportes de SFE.</li>
+        </ul>
+    </div>
+<h2>Categorías de Tiempo</h2>
+<div class="timeline">
+        <div class="step" style="border-top-color: #8e44ad;">
+            <h3 style="color: #8e44ad;">Día No Disponible</h3>
+            <p>Tiempo donde el empleado no está laborando (Permisos, enfermedad, staff parcial).</p>
+        </div>
+<div class="step" style="border-top-color: #e67e22;">
+            <h3 style="color: #e67e22;">Fuera del Territorio</h3>
+            <p>Actividades laborales que no implican visita directa a clientes (Admin, juntas, cursos).</p>
+        </div>
+<div class="step" style="border-top-color: #27ae60;">
+            <h3 style="color: #27ae60;">En el Territorio</h3>
+            <p>Actividades que cuentan como tiempo en territorio (Eventos, soporte, viajes largos).</p>
+        </div>
+    </div>
+<h2>Detalle de Motivos (Other Time Reason)</h2>
+<div class="section">
+        <table class="tot-table">
+            <thead>
+                <tr>
+                    <th>Tipo de Tiempo</th>
+                    <th>Motivo (Reason)</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-unavailable">
+                    <td><strong>Día No Disponible</strong></td>
+                    <td>Licencia / Permiso (Leave)</td>
+                    <td>Todo tipo de ausencia (pagada/no pagada), festivos y enfermedad. GDOP debe capturarse aquí con comentario. Desastres naturales sujetos a aprobación de HoS.</td>
+                </tr>
+                <tr class="row-unavailable">
+                    <td><strong>Día No Disponible</strong></td>
+                    <td>Staff tiempo parcial</td>
+                    <td>Para empleados que no son de ventas de tiempo completo o tienen roles duales. También para capturar tiempo en proyectos (añadir nombre en comentarios).</td>
+                </tr>
+                <tr class="row-off-territory">
+                    <td><strong>Fuera del Territorio</strong></td>
+                    <td>Administración</td>
+                    <td>Tiempo administrativo en oficina/casa o días sin visitas por razones prácticas (ej. falla del auto).</td>
+                </tr>
+                <tr class="row-off-territory">
+                    <td><strong>Fuera del Territorio</strong></td>
+                    <td>Reunión Interna Elanco</td>
+                    <td>Reuniones regionales, de distrito, kick-offs, reuniones de equipo de marca, etc.</td>
+                </tr>
+                <tr class="row-off-territory">
+                    <td><strong>Fuera del Territorio</strong></td>
+                    <td>Capacitación Elanco</td>
+                    <td>Incluye capacitación interna CVS, entrenamiento de producto/enfermedad y capacitación externa.</td>
+                </tr>
+                <tr class="row-in-territory">
+                    <td><strong>En el Territorio</strong></td>
+                    <td>Reunión con Clientes</td>
+                    <td>Eventos externos (conferencias, ferias) y eventos patrocinados (lanzamientos, cenas, webinars). Cuenta para la métrica de % de tiempo en territorio.</td>
+                </tr>
+                <tr class="row-in-territory">
+                    <td><strong>En el Territorio</strong></td>
+                    <td>Soporte en Campo</td>
+                    <td>Uso para Reps Senior / TC / KAM cuando acompañan a otros reps fuera de su propio territorio. No penaliza el promedio de llamadas.</td>
+                </tr>
+                <tr class="row-in-territory">
+                    <td><strong>En el Territorio</strong></td>
+                    <td>Viaje (Travel)</td>
+                    <td>Considerado tiempo en territorio. Excluye traslados diarios normales (mínimo 4h/día o 4h acumuladas por semana).</td>
+                </tr>
+                <tr class="row-in-territory">
+                    <td><strong>En el Territorio</strong></td>
+                    <td>Coaching en Campo</td>
+                    <td><strong>Solo FLM:</strong> Para rastrear días de coaching a representantes en interacciones reales con clientes (presencial o virtual).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<h2>Preguntas Frecuentes</h2>
+<div class="accordion">
+        <button class="accordion-btn">¿Cómo registro el TOT?</button>
+        <div class="accordion-content">
+            <ul>
+                <li>Seleccione "TIME OFF TERRITORY (TIEMPO FUERA DE TERRITORIO)" -> "Leave".</li>
+                <li>Es obligatorio poner EL MOTIVO en el cuadro de comentarios como observación.</li>
+            </ul>
+        </div>
+<button class="accordion-btn">¿Qué pasa si tengo una llamada y medio día de curso?</button>
+        <div class="accordion-content">
+            <ul>
+                <li>Si hay una llamada capturada, el sistema lo contará como un Día de Campo.</li>
+                <li>Puede ingresar MEDIO DIA de TOT para la capacitación, pero la prioridad la tiene la actividad de campo.</li>
+            </ul>
+        </div>
+    </div>
+<footer>SFE México | Elanco</footer>
+</div>
+<script>
+document.querySelectorAll(".accordion-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        document.querySelectorAll(".accordion-content").forEach(c => {
+            if (c !== content) c.style.maxHeight = null;
+        });
+        content.style.maxHeight
+            ? content.style.maxHeight = null
+            : content.style.maxHeight = content.scrollHeight + "px";
+    });
+});
+</script>
+</body>
+</html>
